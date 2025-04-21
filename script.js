@@ -3,7 +3,8 @@ let genreList = document.querySelector("datalist")
 let genreInput = document.querySelector("input[name='genre-list']") 
 let submitBtn = document.querySelector("#submitBtn");
 
-submitBtn.addEventListener('click', function() {
+submitBtn.addEventListener('click', function(evt) {
+  evt.preventDefault();
   let genre = genreInput.value; 
 
   if (genre === "Action") {
