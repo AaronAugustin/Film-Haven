@@ -1,0 +1,101 @@
+@import "fonts.css";
+@import "normalize.css";
+
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: limerick-serial-bold;
+  background-color: #1a0d00;
+
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: #fcaf01;
+}
+
+h2,
+h3 {
+  font-family: limerick-serial-regular;
+}
+
+h1 {
+  font-size: 70px;
+  text-shadow: 5px 5px #b90100;
+}
+
+h2 {
+  font-family: limerick-serial-heavy;
+  font-size: 25px;
+}
+
+.genre {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+input,
+button {
+  margin: 5px;
+  border-radius: 5px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+  font-family: limerick-serial-regular;
+}
+
+button {
+  background-color: #b90100;
+  color: #fcaf01;
+
+}
+
+.input[type="genre-list"] {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+main {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.movie-card {
+  text-align: center;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  border: 4px solid #fcaf01;
+  box-shadow: 5px 5px #b90100;
+  border-radius: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+}
+
+
+#movie-recommendations {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  min-width: 200px;
+  flex-shrink: 0;
+  text-align: center;
+}

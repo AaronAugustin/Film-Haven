@@ -1,95 +1,101 @@
-let apiKey= "180cf8155823e469febc419634ffd71d"
+let apiKey = "180cf8155823e469febc419634ffd71d"
 let genreList = document.querySelector("datalist")
-let genreInput = document.querySelector("input[name='genre-list']") 
+let genreInput = document.querySelector("input[name='genre-list']")
 let submitBtn = document.querySelector("#submitBtn");
 
 submitBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
-  let genre = genreInput.value; 
+  let genre = genreInput.value;
 
   if (genre === "Action") {
     genre = 28;
-  } 
+  }
 
-  if (genre === "Adventure"){
+  if (genre === "Adventure") {
     genre = 12;
   }
 
-  if (genre === "Animation"){
+  if (genre === "Animation") {
     genre = 16;
   }
 
-  if (genre === "Comedy"){
+  if (genre === "Comedy") {
     genre = 35;
   }
 
-  if (genre === "Crime"){
+  if (genre === "Crime") {
     genre = 80;
   }
 
-  if (genre === "Documentary"){
+  if (genre === "Documentary") {
     genre = 99;
   }
 
-  if (genre === "Drama"){
+  if (genre === "Drama") {
     genre = 18;
   }
 
-  if (genre === "Family"){
+  if (genre === "Family") {
     genre = 10751;
   }
 
-  if (genre === "Fantasy"){
+  if (genre === "Fantasy") {
     genre = 14;
   }
 
-  if (genre === "History"){
+  if (genre === "History") {
     genre = 36;
   }
-  if (genre === "Horror"){
+  if (genre === "Horror") {
     genre = 27;
   }
 
-  if (genre === "Music"){
+  if (genre === "Music") {
     genre = 10402;
   }
 
-  if (genre === "Mystery"){
+  if (genre === "Mystery") {
     genre = 9648;
   }
 
-  if (genre === "Romance"){
+  if (genre === "Romance") {
     genre = 10749;
   }
 
-  if (genre === "Science Fiction"){
+  if (genre === "Science Fiction") {
     genre = 878;
   }
 
-  if (genre === "TV Movie"){
+  if (genre === "TV Movie") {
     genre = 10770;
   }
 
-  if (genre === "Thriller"){
+  if (genre === "Thriller") {
     genre = 53;
   }
 
-  if (genre === "War"){
+  if (genre === "War") {
     genre = 10752;
   }
 
-  if (genre === "Western"){
+  if (genre === "Western") {
     genre = 37;
   }
-  
+
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
       let movieData = JSON.parse(xhttp.responseText);
       let movies = movieData.results; // Assuming the API response structure has a "results" array for movies
       // Create a container to hold the movie recommendations
-      let movieContainer = document.createElement('div'); 
-      movieContainer.id = 'movie-recommendations'; 
+      let movieContainer = document.createElement('div');
+      movieContainer.id = 'movie-recommendations';
+
+      let oldContainer = document.querySelector('#movie-recommendations');
+      if (oldContainer) {
+        oldContainer.remove(); // Remove old movie list before adding new one
+      }
+
       movies.forEach(movie => {
         let movieCard = document.createElement('div'); // Create a card for each movie
         movieCard.classList.add('movie-card'); // Add a class for styling

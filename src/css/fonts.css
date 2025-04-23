@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'limerick-serial-heavy';
-  src: url('BENGUIAB.TTF') format('woff2');
+  src: url('../../assets/fonts/BENGUIAB.TTF') format('woff2');
   font-weight: bold;
 }
 
 
 @font-face {
   font-family: 'limerick-serial-regular';
-  src: url('busorama.ttf') format('woff2');
+  src: url('../../assets/fonts/busorama.ttf') format('woff2');
   font-weight: normal;
 }
 
 
 @font-face {
   font-family: 'limerick-serial-bold';
-  src: url('Aachen\ Bold.ttf') format('woff2');
+  src: url('../../assets/fonts/Aachen\ Bold.ttf') format('woff2');
   font-weight: bold;
 }
