@@ -1,6 +1,4 @@
 @import "fonts.css";
-@import "normalize.css";
-
 
 html {
   height: 100%;
@@ -86,16 +84,89 @@ footer {
   padding: 3px;
 }
 
+/*
+* code still needs to be tested, so dont mind this
+* all the code you see below is all for the signin/signup page
+*/
+#carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 
 #movie-recommendations {
   display: flex;
-  overflow-x: auto;
   gap: 20px;
-  padding: 20px;
+  /* Space between movie cards */
+  padding: 20px 0;
+  animation: scrollLeft 60s linear infinite;
+  /* Slow down by increasing duration */
 }
 
 .movie-card {
-  min-width: 200px;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  width: 250px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.movie-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  height: auto;
+}
+
+#carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#carousel-buttons button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.waring_login_signup_txt {
+  text-align: center;
+  color: #fcaf01;
+}
+
+.link {
+  color: #fcaf01;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.link:hover {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
