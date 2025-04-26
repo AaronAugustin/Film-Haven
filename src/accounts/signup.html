@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Film Haven</title>
+    <link rel="icon" href="../../assets/images/video_camera_icon.webp">
+    <link rel="stylesheet" href="../css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="../css/login_signup.css" type="text/css">
+</head>
+<body>
+    <div class="signup_container">
+        <a href="../home.html">
+            <img src="../../assets/images/video_camera_icon.webp" alt="website_logo" class="website_logo">
+        </a>
+
+        <h2>Sign up to Film Haven</h2>
+        
+        <form action="../home.html">
+            <input type="text" placeholder="Username" required>
+            <label for="username"></label>
+            <input type="email" placeholder="Email" required>
+            <label for="email"></label>
+            <input type="password" placeholder="Password" required>
+            <label for="password"></label>
+            <input type="password" placeholder="Confirm Password" required>
+            <label for="confirm_password"></label>
+            <button type="submit">Sign up</button>
+            <p class="warning_login_txt">Already have an account? <a class="link" href="login.html">Log in</a></p>
+        </form>
+    </div>
+
+    <script src="../js/backend/login_handler.js"></script>
+</body>
+</html>
