@@ -7,12 +7,15 @@ html {
     background-color: #1a0d00;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
     color: #fcaf01;
 }
 
-h2, h3 {
+h2,
+h3 {
     font-family: limerick-serial-regular;
 }
 
@@ -25,14 +28,15 @@ h2 {
     font-family: limerick-serial-heavy;
 }
 
-input, button {
-   display: block;
-   margin: 0 auto;
-   margin-top: 10px;
-   text-align: center;
-   font-family: limerick-serial-regular;
-   height: 30px;
-   
+input,
+button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    font-family: limerick-serial-regular;
+    height: 30px;
+
 }
 
 button {
@@ -47,7 +51,7 @@ button:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.website_logo {
+.film_haven_logo {
     display: block;
     margin: 0 auto;
     margin-top: 20px;
@@ -86,67 +90,67 @@ button:hover {
 * Code you see below is a work in progress. It is not yet complete and is subject to change.
 */
 #carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 #carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 #movie-recommendations {
-  display: flex;
-  gap: 20px;
-  /* Space between movie cards */
-  padding: 20px 0;
-  animation: scrollLeft 60s linear infinite;
-  /* Slow down by increasing duration */
+    display: flex;
+    gap: 20px;
+    /* Space between movie cards */
+    padding: 20px 0;
+    animation: scrollLeft 60s linear infinite;
+    /* Slow down by increasing duration */
 }
 
 .movie-card {
-  flex: 0 0 auto;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  margin: 0 10px;
+    flex: 0 0 auto;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 0 10px;
 }
 
 .movie-card img {
-  max-width: 100%;
-  border-radius: 5px;
-  height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+    height: auto;
 }
 
 #carousel-buttons {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 #carousel-buttons button {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 @keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
 
-  100% {
-    transform: translateX(-100%);
-  }
+    100% {
+        transform: translateX(-100%);
+    }
 }
