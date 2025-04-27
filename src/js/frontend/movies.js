@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Replace 'YOUR_API_KEY' with your actual API key.
      */
     const api_data = {
-        apiKey: '180cf8155823e469febc419634ffd71d',
+        apiKey: '',
     };
 
     /**
