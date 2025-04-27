@@ -1,0 +1,49 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: limerick-serial-bold;
+  background-color: #1a0d00;
+
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: #fcaf01;
+}
+
+h2,
+h3 {
+  font-family: limerick-serial-regular;
+}
+
+h1 {
+  font-size: 70px;
+  text-shadow: 5px 5px #b90100;
+}
+
+h2 {
+  font-family: limerick-serial-heavy;
+  font-size: 25px;
+}
+
+.link {
+  color: #fcaf01;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.film_haven_logo {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+}

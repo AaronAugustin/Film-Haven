@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Film Haven</title>
+
+    <link rel="icon" href="../assets/images/video_camera_icon.webp">
+
+    <link rel="stylesheet" href="../css/home.css" type="text/css">
+    <link rel="stylesheet" href="../css/fonts.css" type="text/css">
+
+    <script src="../js/frontend/movies.js"></script>
+</head>
+<body>
+<!-- THIS CODE IS SUBJECT TO CHANGE -->
+<h1>Film Haven</h1>
+
+<div class="signup_login_buttons">
+    <a class="link" href="accounts/signup.html">
+        <button id="signup">Sign Up</button>
+    </a>
+    <a class="link" href="accounts/login.html">
+        <button id="login">Login</button>
+    </a>
+</div>
+
+<h2>Welcome to Film Haven! Here you can find a movie to watch based on genre .</h2>
+
+<h3>Please select a genre from the drop down menu below:</h3>
+<div class="genres">
+  <input list="genre-list" placeholder="Pick A Genre" name="genre-list">
+  <datalist id="genre-list">
+    <option data-value="" value="Action">Action</option>
+    <option data-value="" value="Adventure">Adventure</option>
+    <option data-value="" value="Animation">Animation</option>
+    <option data-value="" value="Comedy">Comedy</option>
+    <option data-value="" value="Crime">Crime</option>
+    <option data-value="" value="Documentary">Documentary</option>
+    <option data-value="" value="Drama">Drama</option>
+    <option data-value="" value="Family">Family</option>
+    <option data-value="" value="Fantasy">Fantasy</option>
+    <option data-value="" value="History">History</option>
+    <option data-value="" value="Horror">Horror</option>
+    <option data-value="" value="Music">Music</option>
+    <option data-value="" value="Mystery">Mystery</option>
+    <option data-value="" value="Romance">Romance</option>
+    <option data-value="" value="Science Fiction">Science Fiction</option>
+    <option data-value="" value="TV Movie">TV Movie</option>
+    <option data-value="" value="Thriller">Thriller</option>
+    <option data-value="" value="War">War</option>
+    <option data-value="" value="Western">Western</option>
+  </datalist>
+  <button id="submit_button"> Gimme Movies !</button>
+</div>
+
+<div id="movies_container">
+  <!-- Displayed movies will be dynamically added here -->
+</div>
+
+<footer>
+  <h3>A site by</h3>
+  <h3>Jerome Foster & Aaron Augustine</h3>
+</footer>
+
+</body>
+</html>

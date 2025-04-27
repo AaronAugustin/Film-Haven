@@ -1,0 +1,17 @@
+{
+  "name": "film-haven",
+  "version": "1.0.0",
+  "description": "Discover new films, watch trailers, and share your thoughts on popular movies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["film", "recommendation", "watch", "share", "review", "TMDB", "API", "axios", "AJAX", "HTML", "CSS", "JavaScript"],
+  "author": "Aaron Augustin & Jerome Foster",
+  "license": "ISC",
+  "dependencies": {
+    "install": "^0.13.0",
+    "npm": "^11.3.0",
+    "tmdb-js-wrapper": "^1.0.4"
+  }
+}
