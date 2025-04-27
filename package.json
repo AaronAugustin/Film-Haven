@@ -1,13 +1,13 @@
 {
-  "name": "film_haven_testing",
+  "name": "film-haven",
   "version": "1.0.0",
-  "description": "Welcome to the official Github repository of Film Haven.",
+  "description": "Discover new films, watch trailers, and share your thoughts on popular movies.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["film", "recommendation", "watch", "share", "review", "TMDB", "API", "axios", "AJAX", "HTML", "CSS", "JavaScript"],
+  "author": "Aaron Augustin & Jerome Foster",
   "license": "ISC",
   "dependencies": {
     "install": "^0.13.0",
