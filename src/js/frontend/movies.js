@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Replace 'YOUR_API_KEY' with your actual API key.
      */
     const api_data = {
-        apiKey: 'YOUR_API_KEY',
+        apiKey: '180cf8155823e469febc419634ffd71d',
     };
 
     /**
@@ -72,47 +72,64 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             if (this.readyState === 4 && this.status === 200) 
             {
-                let movieData = JSON.parse(xhttp.responseText);
-                let movies = movieData.results;
+                let movie_data = JSON.parse(xhttp.responseText);
+                let movies = movie_data.results;
 
                 /**
-                 * TODO:
-                 * - Fix issue where you have to refresh the site to get different movies
-                 * - Fix Carousel effect for displaying movie recommendations
+                 * Create a container to hold movie recommendations
+                 * - Append the movie cards to the container
+                 * - Display the fetched movies in the HTML page
+                 * - Implement a carousel effect for displaying movie recommendations
                  * - Implement pagination for displaying a limited number of movies per page
                  */
-
-                // Create a container to hold the movie recommendations
-                let carouselWrapper = document.createElement('div');
-                carouselWrapper.id = 'carousel-container';
+                let caraousel_wrapper = document.createElement('div');
+                caraousel_wrapper.id = 'carousel-container';
 
                 let header = document.createElement('h1');
                 header.textContent = 'Your Recommendations';
                 header.style.textAlign = 'center';
-                carouselWrapper.appendChild(header);
+                caraousel_wrapper.appendChild(header);
 
-                let movieContainer = document.createElement('div');
-                movieContainer.id = 'movie-recommendations';
+                let movie_container = document.createElement('div');
+                movie_container.id ='movie-recommendations';
 
-                let oldContainer = document.querySelector('#movie-recommendations');
-                if (oldContainer) {
-                    oldContainer.remove(); // Remove old movie list before adding new one
+                let old_container = document.querySelector('#movie-recommendations');
+                if (old_container) {
+                    old_container.remove();
                 }
 
                 movies.forEach(movie => {
-                  let movieCard = document.createElement('div');
-                  movieCard.classList.add('movie-card');
-                  movieCard.innerHTML = `
-                    <h2>${movie.title}</h2>
-                    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">`;
-                  movies_container.appendChild(movieCard);
+                    let movie_card = document.createElement('div');
+                    movie_card.classList.add('movie-card');
+                    movie_card.innerHTML = `
+                        <h2>${movie.title}</h2>
+                        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
+                    `;
+                    movie_container.appendChild(movie_card);
+                });
+
+                let total_pages = Math.ceil(movie_data.total_results / 20); // Number of movies per page
+                let current_pg = 1; // Current page number
+                let pagination_links = document.querySelectorAll('#pagination-container a');
+                pagination_links.forEach((link, index) => {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        current_pg = index + 1;
+                        pagination_links.forEach(link => link.classList.remove('active'));
+                        link.classList.add('active');
+                       
+                    });
                 });
 
                 // Add the movie container to the carousel wrapper
-                carouselWrapper.appendChild(movieContainer);
+                caraousel_wrapper.appendChild(movie_container);
 
                 // Append the carousel wrapper to the document body
-                document.body.appendChild(carouselWrapper);
+                document.body.appendChild(caraousel_wrapper);
+
+
+                // Log the fetched movies for debugging purposes
+                console.log('Movies:', movies);
             }
         };
 
