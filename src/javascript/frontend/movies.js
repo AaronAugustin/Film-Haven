@@ -83,8 +83,26 @@ document.addEventListener('DOMContentLoaded', function() {
                  * - ~~Append the movie cards to the container~~
                  * - ~~Display the fetched movies in the HTML page~~
                  * - ~~Implement a carousel effect for displaying movie recommendations~~
-                 * - Implement pagination for displaying a limited number of movies per page
+                 * - ~~Implement pagination for displaying a limited number of movies per page~~
                  */
+
+                let pagination_container = document.createElement('div');
+                if (!pagination_container) {
+                    pagination_container = document.createElement('div');
+                    pagination_container.classList.add('pagination-container');
+                    document.body.appendChild(pagination_container);
+                }
+                let total_pages = Math.ceil(movies.length / 20);
+                for (let i = 1; i <= total_pages; i++) {
+                    let page_link = document.createElement('a');
+                    page_link.textContent = i;
+                    page_link.href = '#';
+                    pagination_container.appendChild(page_link);
+                    if (i === 1) {
+                        page_link.classList.add('active');
+                    }
+                }
+
                 let carousel_wrapper = document.querySelector('#carousel-container');
                 if (!carousel_wrapper) {
                     carousel_wrapper = document.createElement('div');
@@ -116,6 +134,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                     movie_container.appendChild(movie_card);
                 });
+
+                // Add pagination links
+                let pagination_links = pagination_container.querySelectorAll('a');
+                pagination_links.forEach((link, index) => {
+                    link.addEventListener('click', function() {
+                        pagination_links.forEach(link => link.classList.remove('active'));
+                        link.classList.add('active');
+                        let startIndex = (index - 1) * 20;
+                        let endIndex = startIndex + 20;
+                        movie_container.innerHTML = '';
+                        movies.slice(startIndex, endIndex).forEach(movie => {
+                            let movie_card = document.createElement('div');
+                            movie_card.classList.add('movie-card');
+                            movie_card.innerHTML = `
+                                <h2>${movie.title}</h2>
+                                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
+                            `;
+                            movie_container.appendChild(movie_card);
+                        });
+                    });
+                });
+
+                // Add the movie container to the pagination container
+                pagination_container.appendChild(movie_container);
 
                 // Add the movie container to the carousel wrapper
                 carousel_wrapper.appendChild(movie_container);
