@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Example: Redirect to a login page or show a modal with login form
         // Example: Store user's credentials in local storage or session storage
         // Example: Update the UI to reflect a logged-in user
-        location.href = 'login.html';
+        location.href = 'accounts/login.html';
         localStorage.setItem('currentUser', JSON.stringify({ username: 'example_user', password: 'example_password' }));
         console.log('User logged in');
         is_logged_in = true;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Example: Redirect to a signup page or show a modal with signup form
         // Example: Store new user's credentials in local storage or session storage
         // Example: Update the UI to reflect a new user
-        location.href ='signup.html';
+        location.href ='accounts/signup.html';
         localStorage.setItem('currentUser', JSON.stringify({ username: 'example_user', email: 'example_email@example.com', password: 'example_password' }));
         console.log('User signed up');
         is_logged_in = true;

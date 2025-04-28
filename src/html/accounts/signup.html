@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in - Film Haven</title>
+    <title>Sign Up - Film Haven</title>
 
     <link rel="icon" href="../../../assets/images/video_camera_icon.webp">
 
-    <link rel="stylesheet" href="../css/fonts.css" type="text/css">
-    <link rel="stylesheet" href="../css/login_logout.css" type="text/css">
+    <link rel="stylesheet" href="../../css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="../../css/login_logout.css" type="text/css">
 </head>
 
 <body>
     <div class="login_container">
         <img src="../../../assets/images/video_camera_icon.webp" alt="website_logo" class="film_haven_logo">
 
-        <h2>Log in to Film Haven</h2>
+        <h2>Sign Up in to Film Haven</h2>
 
-        <form action="./home.html">
+        <form action="../home.html">
+            <input type="email" placeholder="Email" id="email">
+            <label for="email"></label>
             <input type="text" placeholder="Username" id="username">
             <label for="username"></label>
             <input type="password" placeholder="Password" id="password">
             <label for="password"></label>
-            <button id="login_submit" type="submit">Log In</button>
+            <button id="signup_submit" type="submit">Sign Up</button>
         </form>
     </div>
 
