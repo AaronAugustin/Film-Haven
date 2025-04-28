@@ -28,6 +28,13 @@ h2 {
   font-size: 25px;
 }
 
+p,
+.warning_text {
+  font-family: limerick-serial-regular;
+  font-size: 20px;
+  color: #b90100;
+}
+
 .link {
   color: #fcaf01;
   text-decoration: underline;
