@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Initialize the TMDb client with your API key. This is necessary to make API requests.
      * Replace 'YOUR_API_KEY' with your actual API key.
      */
-    const api_data = {
-        apiKey: '',
-    };
+    let api_key = '';
 
     /**
     * Update the genre list dynamically using the fetched genres.
@@ -75,20 +73,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 let movie_data = JSON.parse(xhttp.responseText);
                 let movies = movie_data.results;
 
+                if (!movies || movies.length === 0) {
+                    alert('No movies found for the selected genre.');
+                    return;
+                }
+
                 /**
                  * Create a container to hold movie recommendations
-                 * - Append the movie cards to the container
-                 * - Display the fetched movies in the HTML page
-                 * - Implement a carousel effect for displaying movie recommendations
+                 * - ~~Append the movie cards to the container~~
+                 * - ~~Display the fetched movies in the HTML page~~
+                 * - ~~Implement a carousel effect for displaying movie recommendations~~
                  * - Implement pagination for displaying a limited number of movies per page
                  */
-                let caraousel_wrapper = document.createElement('div');
-                caraousel_wrapper.id = 'carousel-container';
-
+                let carousel_wrapper = document.querySelector('#carousel-container');
+                if (!carousel_wrapper) {
+                    carousel_wrapper = document.createElement('div');
+                    carousel_wrapper.classList.add('carousel-wrapper');
+                    document.body.appendChild(carousel_wrapper);
+                }
+                carousel_wrapper.innerHTML = ''; // Clear previous carousel content
+ 
                 let header = document.createElement('h1');
                 header.textContent = 'Your Recommendations';
                 header.style.textAlign = 'center';
-                caraousel_wrapper.appendChild(header);
+                carousel_wrapper.appendChild(header);
+                header.innerHTML += `<div id="carousel-container"></div>`;
 
                 let movie_container = document.createElement('div');
                 movie_container.id ='movie-recommendations';
@@ -108,32 +117,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     movie_container.appendChild(movie_card);
                 });
 
-                let total_pages = Math.ceil(movie_data.total_results / 20); // Number of movies per page
-                let current_pg = 1; // Current page number
-                let pagination_links = document.querySelectorAll('#pagination-container a');
-                pagination_links.forEach((link, index) => {
-                    link.addEventListener('click', (event) => {
-                        event.preventDefault();
-                        current_pg = index + 1;
-                        pagination_links.forEach(link => link.classList.remove('active'));
-                        link.classList.add('active');
-                       
-                    });
-                });
-
                 // Add the movie container to the carousel wrapper
-                caraousel_wrapper.appendChild(movie_container);
+                carousel_wrapper.appendChild(movie_container);
 
                 // Append the carousel wrapper to the document body
-                document.body.appendChild(caraousel_wrapper);
-
+                document.body.appendChild(carousel_wrapper);
 
                 // Log the fetched movies for debugging purposes
                 console.log('Movies:', movies);
             }
         };
 
-        xhttp.open("GET", `https://api.themoviedb.org/3/discover/movie?api_key=${api_data.apiKey}&with_genres=${genre}`, true);
-        xhttp.send();
+        // If you're logged in, fetch movie recommendations
+        if (localStorage.getItem('currentUser')) {
+            xhttp.open("GET", `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&with_genres=${genre}`, true);
+            xhttp.send();
+        } else {
+            alert('Please log in to access movie recommendations.');
+        }
     };
 });

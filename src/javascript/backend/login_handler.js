@@ -1,51 +1,40 @@
 /**
- *  This is a simple example of a Node.js server with a signup and login functionality.
- *  It doesn't handle user sessions or encryption, and is only meant for demonstration purposes.
- *  This is subject to change.
+ * Basic login / logout system for node.js
+ * Due to Film Haven being a prototype, this code is not complete and doesnt' handle user sessions or any sort of encryption.
  */
 
-// Mock user database
-const users = [];
+document.addEventListener('DOMContentLoaded', function() {
+    const is_logged_in = localStorage.getItem('currentUser');
+    const login_btn = document.getElementById('login-btn');
+    const logout_btn = document.getElementById('logout-btn');
 
-// Signup function
-function signup(username, password) {
-    if (users.find(user => user.username === username)) {
-        return { success: false, message: 'Username already exists' };
+    login_btn.addEventListener('click', function() {
+        // Handle login logic here
+        // Example: Redirect to a login page or show a modal with login form
+        // Example: Store user's credentials in local storage or session storage
+        // Example: Update the UI to reflect a logged-in user
+        location.href = 'login.html';
+        localStorage.setItem('currentUser', JSON.stringify({ username: 'example_user', password: 'example_password' }));
+        console.log('User logged in');
+        is_logged_in = true;
+    });
+
+    logout_btn.addEventListener('click', function() {
+        // Handle logout logic here
+        // Example: Clear user's credentials from local storage or session storage
+        // Example: Update the UI to reflect a logged-out user
+        location.href = 'home.html';
+        localStorage.removeItem('currentUser');
+        console.log('User logged out');
+        is_logged_in = false;
+    });
+
+    if (is_logged_in) {
+        document.getElementById('login-btn').style.display = 'none';
+        document.getElementById('logout-btn').style.display = 'block';
+    } else {
+        document.getElementById('logout-btn').style.display = 'none';
+        document.getElementById('login-btn').style.display = 'block';
     }
-    users.push({ username, password });
-    return { success: true, message: 'Signup successful' };
-}
-
-// Login function
-function login(username, password) {
-    const user = users.find(user => user.username === username && user.password === password);
-    if (user) {
-        window.location.href = 'home.html';
-        return { success: true, message: 'Login successful' };
-    }
-    return { success: false, message: 'Invalid username or password' };
-}
-
-// Example usage
-document.getElementById('signupForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = document.getElementById('signupUsername').value;
-    const password = document.getElementById('signupPassword').value;
-    const result = signup(username, password);
-    alert(result.message);
 });
 
-document.getElementById('loginForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = document.getElementById('loginUsername').value;
-    const password = document.getElementById('loginPassword').value;
-    const result = login(username, password);
-    alert(result.message);
-});
-
-document.getElementById('searchForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const query = document.getElementById('searchQuery').value;
-    const movies = await searchMovies(query);
-    console.log('Search results:', movies);
-});
