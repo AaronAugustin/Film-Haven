@@ -5,9 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Add
-- Implemened pagination for displaying a limited number of movies per page
-
+### Added
+- Implemented pagination for displaying a limited number of movies per page
+- Basic Signup Functionality
+    - Just a shitton of copy & pasting of the login / logout functions lol
+    
 ## [0.2.0] - 2025-28-04
 ### Added
 - Login / Logout functionality
