@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Uses ``localStorage.setItem()`` to get basic functionality out of the site.
 - Node Dependencies ([install before cloning the source code!](https://nodejs.org/en/download))
     - TMDb: ``npm install tmdb-js-wrapper``
-    - Chalk ``npm install chalk``
+    - Chalk ``npm install chalk`` (optional)
 - Crash page that redirects to the main page (debug purposes)
 ### Changed
 - Movies are now displayed in a conveyor belt type form instead of a long column
