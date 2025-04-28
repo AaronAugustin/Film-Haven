@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implemented pagination for displaying a limited number of movies per page
 - Basic Signup Functionality
     - Just a shitton of copy & pasting of the login / logout functions lol
+- A warning message to inform people to get an ``api_key`` before using the site
     
 ## [0.2.0] - 2025-28-04
 ### Added

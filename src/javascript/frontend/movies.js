@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /**
      * Fetch movie genres and update the genre list dynamically.
-     * - Use AJAX to fetch data from the API endpoint.
-     * - Display the fetched genres in the genre list.
      */
     submit_button.onclick = function(e) {
         e.preventDefault();
@@ -62,9 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
         genre = genre_map[genre] || genre;
 
         /**
-         * Use AJAX to fetch data from the API endpoint.
-         * - Display fetched movies based on the selected genre.
-         */
+        * Fetch movie data based on the selected genre and display it in a carousel.
+        * - Make API request to the TMDb API to fetch movies based on the selected genre.
+        */
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() 
         {
@@ -77,14 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert('No movies found for the selected genre.');
                     return;
                 }
-
-                /**
-                 * Create a container to hold movie recommendations
-                 * - ~~Append the movie cards to the container~~
-                 * - ~~Display the fetched movies in the HTML page~~
-                 * - ~~Implement a carousel effect for displaying movie recommendations~~
-                 * - ~~Implement pagination for displaying a limited number of movies per page~~
-                 */
 
                 let pagination_container = document.createElement('div');
                 if (!pagination_container) {
@@ -170,7 +160,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        // If you're logged in, fetch movie recommendations
+        /**
+        * Do not continue further unless an API key is provided.
+        * If not, display an alert message and stop further execution.
+        */
+        if (!api_key) {
+            alert('Looks like you haven\'t set up your API token yet.\nPlease visit https://developers.themoviedb.org/3/getting-started\nto get your API key, and try again.');
+            console.error('API key is not provided.')
+            return;
+        } else {
+            console.log(`API key provided: ${api_key}`);
+        }
+
+        /**
+        * Only fetch movie recommendation's if the user is logged in.
+        * Otherwise, it displays an alert message to do so.
+        */
         if (localStorage.getItem('currentUser')) {
             xhttp.open("GET", `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&with_genres=${genre}`, true);
             xhttp.send();
