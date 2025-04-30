@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic Signup Functionality
     - Just a shitton of copy & pasting of the login / logout functions lol
 - A warning message to inform people to get an ``api_key`` before using the site
+### Changed
+- Made a message to inform you that you need a API Key before using the site
+    - in order to get one go to [TMDb API](https://developer.themoviedb.org/docs/getting-started) to signup today
     
 ## [0.2.0] - 2025-28-04
 ### Added
