@@ -5,7 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const is_logged_in = localStorage.getItem('currentUser');
-
     const login_btn = document.getElementById('login-btn');
     const logout_btn = document.getElementById('logout-btn');
     const signup_btn = document.getElementById('signup-btn');
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Example: Redirect to a signup page or show a modal with signup form
         // Example: Store new user's credentials in local storage or session storage
         // Example: Update the UI to reflect a new user
-        location.href ='accounts/signup.html';
+        location.href = 'accounts/signup.html';
         localStorage.setItem('currentUser', JSON.stringify({ username: 'example_user', email: 'example_email@example.com', password: 'example_password' }));
         console.log('User signed up');
         is_logged_in = true;
