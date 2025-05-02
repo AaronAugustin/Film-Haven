@@ -1,9 +1,18 @@
+/**
+ * Initialize the TMDb client with your API key. This is necessary to make API requests.
+ * 
+ * API you see below is a placeholder and is used for testing purposes.
+ * Replace it with your actual API key.
+ */
+const api_key = '180cf8155823e469febc419634ffd71d';
+
 document.addEventListener('DOMContentLoaded', function() {
     /**
-     * Initialize the TMDb client with your API key. This is necessary to make API requests.
-     * Replace 'YOUR_API_KEY' with your actual API key.
+     * Check if the user is logged in
+     * 
+     * They start off as not logged in, and only gain access to the website if they are logged in.
      */
-    let api_key = '';
+    const is_logged_in = localStorage.getItem('currentUser');
 
     /**
     * Update the genre list dynamically using the fetched genres.
@@ -64,10 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
         * - Make API request to the TMDb API to fetch movies based on the selected genre.
         */
         let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() 
-        {
-            if (this.readyState === 4 && this.status === 200) 
-            {
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
                 let movie_data = JSON.parse(xhttp.responseText);
                 let movies = movie_data.results;
 
@@ -100,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.body.appendChild(carousel_wrapper);
                 }
                 carousel_wrapper.innerHTML = ''; // Clear previous carousel content
- 
+
                 let header = document.createElement('h1');
                 header.textContent = 'Your Recommendations';
                 header.style.textAlign = 'center';
@@ -108,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 header.innerHTML += `<div id="carousel-container"></div>`;
 
                 let movie_container = document.createElement('div');
-                movie_container.id ='movie-recommendations';
+                movie_container.id = 'movie-recommendations';
 
                 let old_container = document.querySelector('#movie-recommendations');
                 if (old_container) {
@@ -155,32 +162,57 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Append the carousel wrapper to the document body
                 document.body.appendChild(carousel_wrapper);
 
-                // Log the fetched movies for debugging purposes
-                console.log('Movies:', movies);
+                /**
+                 * Log all the movie data bullshit in the console.
+                 * - Movie title
+                 * - Movie poster
+                 * - Movie overview
+                 * - Movie release date
+                 * - Movie genre
+                 */
+                console.log('Movies : ', movies);
+                console.log('Other Movie Data Bulls***: ', movie_data);
             }
         };
 
         /**
-        * Do not continue further unless an API key is provided.
-        * If not, display an alert message and stop further execution.
-        */
-        if (!api_key) {
-            alert('Looks like you haven\'t set up your API token yet.\nPlease visit https://developers.themoviedb.org/3/getting-started\nto get your API key, and try again.');
-            console.error('API key is not provided.')
-            return;
-        } else {
-            console.log(`API key provided: ${api_key}`);
-        }
+         * I deeply apologize for all these if conditons, but here me out.
+         *
+         * - If Logged in, make a `console.log()` msg to fetch movie data based on the selected genre. (to know if its working lmao)
+         * Otherwise, display an alert message and stop further execution.
+         * 
+         * - If the API key is not provided, display an alert message and stop further execution. (to both inform the user, and to prevent the API from breaking)
+         * Otherwise, display the API key in the console.
+         *
+         * - If the user is not logged in, display an alert message and stop further execution.
+         * Otherwise, display the user's username in the console.
+         *
+         * - If the selected genre is not valid, display an alert message and stop further execution.
+         * Otherwise, display the selected genre in the console.
+         *
+         */
+        if (is_logged_in) {
+            console.log(`Fetching movie data based on the selected genre: ${genre}`);
 
-        /**
-        * Only fetch movie recommendation's if the user is logged in.
-        * Otherwise, it displays an alert message to do so.
-        */
-        if (localStorage.getItem('currentUser')) {
             xhttp.open("GET", `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&with_genres=${genre}`, true);
             xhttp.send();
+
+            if (!api_key) {
+                alert('Looks like you haven\'t set up your API token yet.\nPlease visit https://developers.themoviedb.org/3/getting-started\nto get your API key, and try again.');
+                console.error('API key is not provided.')
+                return;
+            } else {
+                console.log(`API key provided: ${api_key}`);
+            }
+
+            console.log(`User is logged in: ${is_logged_in}`);
+            is_logged_in = true;
+            return;
         } else {
-            alert('Please log in to access movie recommendations.');
+            alert('Please log in to view movie recommendations.');
+            console.error('User is not logged in.');
+            is_logged_in = false;
+            return;
         }
     };
 });
