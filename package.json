@@ -1,6 +1,6 @@
 {
   "name": "film-haven",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Discover new films, watch trailers, and share your thoughts on popular movies.",
   "main": "index.js",
   "scripts": {

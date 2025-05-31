@@ -4,7 +4,7 @@ All notable changes will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.2.1] - 2025-05-02
 ### Added
 - Implemented pagination for displaying a limited number of movies per page
 - Basic Signup Functionality
@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Made a message to inform you that you need a API Key before using the site
     - in order to get one go to [TMDb API](https://developer.themoviedb.org/docs/getting-started) to signup today
     
-## [0.2.0] - 2025-28-04
+## [0.2.0] - 2025-04-28
 ### Added
 - Login / Logout functionality
     - Basic login page.
