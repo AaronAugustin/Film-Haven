@@ -1,0 +1,44 @@
+.movie-card {
+  display: block;
+  flex: 0 0 auto;
+  width: 250px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movie-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  height: auto;
+}
+
+#carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#movie-recommendations {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  animation: scrollLeft 60s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
