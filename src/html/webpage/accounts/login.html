@@ -8,13 +8,15 @@
 
     <link rel="icon" href="../../../assets/images/video_camera_icon.webp">
 
-    <link rel="stylesheet" href="../../css/fonts.css" type="text/css">
-    <link rel="stylesheet" href="../../css/login_logout.css" type="text/css">
+    <link rel="stylesheet" href="../../../css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="../../../css/webpage/login_logout.css" type="text/css">
+
+    <script src="../../../javascript/backend/users/login.js"></script>
 </head>
 
 <body>
     <div class="login_container">
-        <img src="../../../assets/images/video_camera_icon.webp" alt="website_logo" class="film_haven_logo">
+        <img src="../../../../assets/images/video_camera_icon.webp" alt="website_logo" class="film_haven_logo">
 
         <h2>Log in to Film Haven</h2>
 
@@ -23,7 +25,7 @@
             <label for="username"></label>
             <input type="password" placeholder="Password" id="password">
             <label for="password"></label>
-            <button id="login_submit" type="submit">Log In</button>
+            <button class="login_submit" type="submit">Log In</button>
         </form>
     </div>
 
@@ -33,11 +35,9 @@
     <div class="signup-option__container">
         <h2>Don't have an account?</h2>
         <a href="signup.html" class="link">
-            <button id="create_account_btn" type="submit">Create an Account</button>
+            <button class="create_account_btn" type="submit">Create an Account</button>
         </a>
     </div>
-
-    <script src="../javascript/backend/login.js"></script>
 </body>
 
 </html>

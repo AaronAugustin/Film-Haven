@@ -5,9 +5,10 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const is_logged_in = localStorage.getItem('currentUser');
-    const login_btn = document.getElementById('login-btn');
-    const logout_btn = document.getElementById('logout-btn');
-    const signup_btn = document.getElementById('signup-btn');
+
+    const login_btn = document.querySelector('.login-btn');
+    const logout_btn = document.querySelector('.logout-btn');
+    const signup_btn = document.querySelector('.signup-btn');
 
     login_btn.addEventListener('click', function() {
         // Handle login logic here
@@ -42,13 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (is_logged_in) {
-        document.getElementById('login-btn').style.display = 'none';
-        document.getElementById('signup-btn').style.display = 'none';
-        document.getElementById('logout-btn').style.display = 'block';
+        document.querySelector('.login-btn').style.display = 'none';
+        document.querySelector('.signup-btn').style.display = 'none';
+        document.querySelector('.logout-btn').style.display = 'block';
     } else {
-        document.getElementById('logout-btn').style.display = 'none';
-        document.getElementById('signup-btn').style.display = 'block';
-        document.getElementById('login-btn').style.display = 'block';
+        document.querySelector('.logout-btn').style.display = 'none';
+        document.querySelector('.signup-btn').style.display = 'block';
+        document.querySelector('.login-btn').style.display = 'block';
     }
 });
 
