@@ -24,6 +24,7 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.4.1",
+    "dotenv": "^16.5.0",
     "install": "^0.13.0",
     "npm": "^11.3.0",
     "tmdb-js-wrapper": "^1.0.4"

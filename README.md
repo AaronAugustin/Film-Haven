@@ -10,7 +10,9 @@ Here are the steps to fork this repository, and the tools if needed:
 
 - Go to your command line, and type ``git clone https://github.com/AaronAugustin/Film-Haven.git``.
 - [Node](https://nodejs.org/en/download) is supported with this website, so it would need to be installed if you don't already have it.
-    - After it's installed, go to the directory your project is in, and type ``npm install tmdb-js-wrapper``.
+    - After it's installed, go to the directory your project is in, and type in the following dependencies:
+        - ```npm install tmdb-js-wrapper```
+        - ```npm i dotenv```
 
 If you follow all of these steps above, the code should all be in your hands!
 
