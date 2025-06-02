@@ -1,23 +1,38 @@
-document.getElementById('login_submit').addEventListener('click', function(e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    /**
+     * @description Handles whether the user is logged in or not using localStorage.
+     * @type {string|null}
+     * @returns {boolean} true if the user is logged in, false otherwise
+     */
+    const is_logged_in = localStorage.getItem('currentUser');
 
     /**
-     * Basic login logic
-     * Assuming user data is validated and stored securely.
-     * This is a placeholder and does not handle user data securely.
+     * @description Basic login button that redirects you the the registration page
+     * @type {HTMLButtonElement}
      */
-    location.href = '../home.html';
-    console.log('User logged in');
-});
-
-document.getElementById('signup_submit').addEventListener('click', function(e) {
-    e.preventDefault();
+    const login_btn = document.querySelector('.login-btn');
 
     /**
-     * Basic signup logic 
-     * Assuming user data is validated and stored securely.
-     * This is a placeholder and does not handle user data securely.
+     * @description Basic logout button that clears localStorage, and refreshes the home page.
+     * @type {HTMLButtonElement}
      */
-    location.href = '../home.html';
-    console.log('User signed up');
+    const logout_btn = document.querySelector('.logout-btn');
+
+    login_btn.onClick = function() {
+        location.href = 'users/registration.html';
+        console.log('click');
+    };
+
+    logout_btn.onClick = function() {
+        localStorage.removeItem('currentUser');
+        location.reload();
+    };
+
+    if (is_logged_in) {
+       document.querySelector('.login-btn').style.display = 'none';
+       document.querySelector('.logout-btn').style.display = 'block';
+    } else {
+       document.querySelector('.login-btn').style.display = 'block';
+       document.querySelector('.logout-btn').style.display = 'none';
+    }
 });
