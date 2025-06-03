@@ -257,9 +257,8 @@ img {
   gap: 20px;
 }
 
-.login-btn, 
-.logout-btn, 
-.signup-btn {
+#login-btn, 
+#logout-btn {
   background-color: #fcaf01;
   color: #b90100;
   border: none;
@@ -270,9 +269,8 @@ img {
   transition: 0.3s ease;
 }
 
-.login-btn:hover, 
-.logout-btn:hover, 
-.signup-btn:hover {
+#login-btn:hover, 
+#logout-btn:hover {
   background-color: rgba(252, 177, 1, 0.589);
   color: #b900008f;
   border: none;
