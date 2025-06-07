@@ -1,0 +1,92 @@
+@import '../elements/fonts.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: limerick-serial-bold;
+  background-color: #1a0d00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.film_haven_logo {
+  width: 100px;
+  margin-bottom: 25px;
+}
+
+.login_container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  padding: 50px 40px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.login_container h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+input {
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #f6c700;
+}
+
+.login_submit, 
+.signup_submit {
+  background-color: #f6c700;
+  color: black;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.login_submit:hover,
+.signup_submit:hover {
+  background-color: #e0b800;
+}
+
+.create_account_btn {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  color: #333;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.create_account_btn:hover {
+  border-color: #f6c700;
+}
+
+.link {
+  text-decoration: none;
+}

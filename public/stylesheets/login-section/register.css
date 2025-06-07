@@ -1,4 +1,4 @@
-@import 'fonts.css';
+@import '../elements/fonts.css';
 
 html, body {
   height: 100%;

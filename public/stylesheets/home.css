@@ -1,5 +1,4 @@
-@import "fonts.css";
-@import "../webpage/elements/movie_carousel.css";
+@import "elements/fonts.css";
 
 html {
   height: 100%;

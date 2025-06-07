@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Film Haven</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="../../../assets/icons/video_camera_icon.webp">
+    <title><%= title %></title>
 
-  <link rel="stylesheet" href="../../css/webpage/elements/movie_carousel.css" type="text/css">
-  <link rel="stylesheet" href="../../css/webpage/home.css" type="text/css">
-  <link rel="stylesheet" href="../../css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="../public/stylesheets/home.css" type="text/css">
+    <link rel="stylesheet" href="../public/stylesheets/elements/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="icon" href="../public/assets/icons/video_camera_icon.webp"/>
 
-  <script src="../../javascript/backend/users/login_system.js"></script>
+    <script src="../public/javascripts/#"></script>
+    
 </head>
-
 <body>
-  <nav class="navbar">
+    <nav class="navbar">
     <div class="navbar-left">
-      <a href="home.html" class="nav-link">
+      <a href="home" class="nav-link">
          <div class="logo">Film Haven</div>
       </a>
     </div>
@@ -29,7 +27,6 @@
       <select class="search-filter">
         <option>All</option>
         <option>Movies</option>
-        <option>Reviews</option>
         <option>Saved Movies</option>
       </select>
       <input type="text" placeholder="Search Film Haven" class="search-input">
@@ -89,6 +86,4 @@
     </section>
   </div>
 </body>
-
-<script src="../../javascript/frontend/tmdb/movie_carousel.js"></script>
 </html>

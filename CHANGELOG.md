@@ -11,10 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
         - Navagation bar
         - You can now save movies and leave reviews
         - You can now select a language from your region (EN & ES are only available)
-
     - Updated login screen
-        - You can now sign in / sign up with google
-        - 
 
 ## [0.2.1] - 2025-05-02
 ### Added
