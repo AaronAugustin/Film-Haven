@@ -1,10 +1,9 @@
 {
   "name": "film-haven",
   "version": "0.2.1",
-  "description": "Discover new films, watch trailers, and share your thoughts on popular movies.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "keywords": [
     "film",
