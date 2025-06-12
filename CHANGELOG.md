@@ -9,9 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Complete Website overhaul
     - Updated home page
         - Navagation bar
-        - You can now save movies and leave reviews
+        - You can now save movies
         - You can now select a language from your region (EN & ES are only available)
-    - Updated login screen
+    - Updated login screen (Identical to the IMDb login screen)
 
 ## [0.2.1] - 2025-05-02
 ### Added
@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Made a message to inform you that you need a API Key before using the site
     - in order to get one go to [TMDb API](https://developer.themoviedb.org/docs/getting-started) to signup today
-    
+
 ## [0.2.0] - 2025-04-28
 ### Added
 - Login / Logout functionality

@@ -1,37 +1,18 @@
 {
-  "name": "film-haven",
+  "name": "Film-Haven",
   "version": "0.2.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
-  "keywords": [
-    "film",
-    "recommendation",
-    "watch",
-    "share",
-    "review",
-    "TMDB",
-    "API",
-    "axios",
-    "AJAX",
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "author": "Aaron Augustin & Jerome Foster",
-  "license": "ISC",
   "dependencies": {
-    "chalk": "^5.4.1",
-    "cookie-parser": "^1.4.7",
-    "debug": "^4.4.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "express-generator": "^4.16.1",
-    "http-errors": "^2.0.0",
-    "install": "^0.13.0",
-    "morgan": "^1.10.0",
-    "npm": "^11.3.0",
-    "tmdb-js-wrapper": "^1.0.4"
+    "express": "^4.21.2",
+    "http-errors": "~1.6.3",
+    "i18n": "^0.15.1",
+    "morgan": "~1.9.1",
+    "tmdb-js-wrapper": "^1.0.3"
   }
 }

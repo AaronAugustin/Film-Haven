@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="/stylesheets/login-section/signin.css" type="text/css"/>
+
+    <link rel="icon" href="/assets/icons/video_camera_icon.webp"/>
+</head>
+
+<body>
+    <div class="login_container">
+        <img src="/assets/icons/video_camera_icon.webp" alt="website_logo" class="film_haven_logo">
+
+        <div class="login_box">
+            <h2>Sign in for Film Haven</h2>
+
+            <form action="../">
+                <input type="text" placeholder="Username" id="username">
+                <label for="username"></label>
+                <input type="password" placeholder="Password" id="password">
+                <label for="password"></label>
+                <button class="signup_submit" type="submit">Sign In</button>
+            </form>
+
+            <br> <hr>
+
+            <div class="new">
+                <span>Don't have an account?</span>
+            </div>
+
+            <br>
+
+            <a href="signup" class="link">
+                <button class="create_account_btn" type="submit">Sign Up</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

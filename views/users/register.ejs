@@ -3,44 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3; url=index.ejs" />
 
     <title><%= title %></title>
 
-    <link rel="stylesheet" href="/public/stylesheets/login-section/register.css" type="text/css">
-    <link rel="stylesheet" href="/public/stylesheets/elements/fonts.css">
+    <link rel="stylesheet" href="/stylesheets/login-section/register.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/login-section/register_test.css" type="text/css">
 
-    <link rel="icon" href="/public/assets/icons/video_camera_icon.webp"/>
-    
+    <link rel="icon" href="/assets/icons/video_camera_icon.webp"/>
+
 </head>
 <body>
     <div class="register_container">
         <div class="left">
             <h2>Sign In</h2>
 
-            <a href="./login.ejs" class="link">
+            <a href="./signin" class="link">
                 <button class="btn film_haven">
-                    <img src="/public/assets/icons/video_camera_icon.webp" alt="film_haven_logo">
+                    <img src="/assets/icons/video_camera_icon.webp" alt="film_haven_logo">
                     Sign in with Film Haven
                 </button>
             </a>
 
-            <a href="./signup.ejs" class="link">
+            <a href="./signup" class="link">
                 <button class="btn create">Create a New Account</button>
             </a>
 
             <p class="terms_conditions">
-                By signing in, you agree to TMDb's <a href="https://www.themoviedb.org/terms-of-use?language=en-US">Terms of use</a> and <a href="https://www.themoviedb.org/privacy-policy?language=en-US">Privacy Policy.</a>
+                By signing in, you agree to TMDb's 
+                <a href="https://www.themoviedb.org/terms-of-use?language=en-US">Terms of use</a> and 
+                <a href="https://www.themoviedb.org/privacy-policy?language=en-US">Privacy Policy.</a>
             </p>
-        </div>
+        </div
 
         <div class="right">
             <h2>Benifits of your free Film Haven account</h2>
-            <p><strong>Your Ratings</strong><br>Rate and review everything you seen.</p>
-            <p><strong>Your Watchlist</strong><br>Track everything you want to watch and receive e-mail when movies open in theaters.</p>
-            <p><strong>Contribute to Film Haven</strong><br>Add movie data yourself and get cool badges for doing that.</p>
+
+            <!-- 
+                for some dumbass reason the CSS broke on me, so im just gonna do every benifit indiviually.
+                idk how ppl do this without putting a 12 gauge shotgun to their brain.
+            -->
+            <div class="benifits">
+                <div class="benifit">
+                    <h4>Your Ratings</h4>
+                    <p>Rate and review everything you seen.</p>
+                </div>
+
+                <div class="benifit">
+                    <h4>Your Watchlist</h4>
+                    <p>Track everything you want to watch and recieve notifications when movies open in theaters.</p>
+                </div>
+
+                <div class="benifit">
+                    <h4>Contribute to Film Haven</h4>
+                    <p>Add movie data yourself and get cool badges for doing it!</p>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 </html>

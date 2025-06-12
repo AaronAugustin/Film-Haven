@@ -297,10 +297,7 @@ img {
   font-weight: bold;
 }
 
-.movie-conveyor__text h2,
-.featured-movies__text h2,
-.top-rated-movies__text h2,
-.top-box-office__text h2 {
+.now-playing__text h2 {
   font-family: limerick-serial-regular;
   color: #fcaf01;
 }

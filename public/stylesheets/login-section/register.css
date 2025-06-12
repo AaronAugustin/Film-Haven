@@ -1,92 +1,130 @@
-@import '../elements/fonts.css';
-
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
+  padding: 0;
   font-family: limerick-serial-bold;
   background-color: #1a0d00;
+}
+
+.register_container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  width: 250px;
+  padding-right: 30px;
+  border-right: 1px solid #ddd;
+  padding-right: 30px;
+  min-width: 280px;
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.film_haven_logo {
-  width: 100px;
-  margin-bottom: 25px;
-}
-
-.login_container {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-  padding: 50px 40px;
-  width: 100%;
-  max-width: 480px;
-  text-align: center;
-}
-
-.login_container h2 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #333;
-}
-
-form {
+.right {
+  flex: 1;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 25px;
 }
 
-input {
-  padding: 14px 16px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  outline: none;
-  transition: border-color 0.2s;
+.right h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+  max-width: 400px; /* prevent it from stretching into other columns */
+  word-wrap: break-word;
 }
 
-input:focus {
-  border-color: #f6c700;
-}
-
-.login_submit, 
-.signup_submit {
-  background-color: #f6c700;
-  color: black;
-  border: none;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 30px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.2s;
-}
-
-.login_submit:hover,
-.signup_submit:hover {
-  background-color: #e0b800;
-}
-
-.create_account_btn {
-  background-color: transparent;
-  border: 2px solid #ccc;
+.right p {
+  font-size: 14px;
   color: #333;
-  padding: 12px;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.benifits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.benifit {
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+
+.benifit h4 {
+  margin: 0 0 5px;
   font-size: 15px;
   font-weight: bold;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: border-color 0.2s;
 }
 
-.create_account_btn:hover {
-  border-color: #f6c700;
+.benifit p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn img {
+  height: 20px;
+  width: 20px;
+}
+
+.btn.film_haven {
+  background-color: #f6c700;
+  border: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn.create{
+  width: 100%;
+  background-color: #f6c700;
+  color: black;
+  font-weight: bold;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .link {
+  color: black;
+  text-decoration: none;
+}
+
+.terms_conditions {
+  font-size: 12px;
+  color: #666;
+  margin-top: 15px;
+}
+
+.terms_conditions a {
+  color: #0073bb;
   text-decoration: none;
 }
