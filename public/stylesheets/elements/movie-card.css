@@ -1,4 +1,4 @@
-#movie-recommendations {
+#lastest-movies {
   display: flex;
   gap: 20px;
   overflow-x: auto;
@@ -15,16 +15,76 @@
   border-bottom: 2px solid #333;
 }
 
-#movie-recommendations::-webkit-scrollbar {
+#lastest-movies::-webkit-scrollbar {
   height: 10px;
 }
 
-#movie-recommendations::-webkit-scrollbar-thumb {
+#lastest-movies::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 10px;
 }
 
-#movie-recommendations::-webkit-scrollbar-thumb:hover {
+#lastest-movies::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#watchlist {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  height: fit-content;
+  max-width: 100%;
+  background-color: #121212;
+  margin-top: 20px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+#watchlist::-webkit-scrollbar {
+  height: 10px;
+}
+
+#watchlist::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+#watchlist::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.genre__images {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  height: fit-content;
+  max-width: 100%;
+  background-color: #121212;
+  margin-top: 20px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.genre__images::-webkit-scrollbar {
+  height: 10px;
+}
+
+.genre__images::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.genre__images::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
@@ -79,7 +139,9 @@ p {
   padding: 0 10px 12px 10px;
 }
 
-.btn {
+.view-more,
+.save,
+.remove {
   background-color: #fcaf01;
   color: #b90100;
   border: none;
@@ -88,8 +150,15 @@ p {
   cursor: pointer;
   font-size: 0.85rem;
   transition: background-color 0.3s;
+  margin-right: 5px;
 }
 
-.btn:hover {
+.remove {
+  background-color: #dc3545;
+  color: white;
+}
+
+.view-more:hover,
+.save:hover {
   background-color: rgba(252, 177, 1, 0.589);
 }

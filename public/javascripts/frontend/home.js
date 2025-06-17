@@ -1,5 +1,8 @@
 import fetchMovies, { fetchMovieDetails } from "../api/api_services.js";
 
+// Export loadSavedMovies function
+export { loadSavedMovies } from "../api/api_services.js";
+
 document.addEventListener("DOMContentLoaded", function (e) {
   fetchMovies();
   fetchMovieDetails();

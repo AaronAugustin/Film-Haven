@@ -4,14 +4,32 @@ All notable changes will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.0]
+### Added
+- Node.js Support (dependencies will be listed below)
+  - cookie-parser
+  - debug
+  - ejs
+  - express
+  - http-errors
+  - i18n
+  - morgan
+  - tmdb-js-wrapper
+- Langauge Support
+    - The website can now be viewed in spanish
+- "Snuck in" the prototype to main page
 ### Changed
-- Complete Website overhaul
-    - Updated home page
-        - Navagation bar
-        - You can now save movies
-        - You can now select a language from your region (EN & ES are only available)
-    - Updated login screen (Identical to the IMDb login screen)
+- Website went through a complete overhaul!
+    - Added a Navagation bar
+    - Updated login/registration page
+    - You can now save movies to your new watchlist
+    - You can learn more about movies with the brand new details page
+- New Sections
+    - Latest movie release (now playing)
+    - Your Watchlist (saved movies)
+    - Genres (this was shown in the prototype, but made some tweaks to it :smile:)
+### Fixed
+- A shitton of bugs i forgot to list.
 
 ## [0.2.1] - 2025-05-02
 ### Added

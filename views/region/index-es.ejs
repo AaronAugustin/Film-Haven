@@ -1,70 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="/assets/icons/video_camera_icon.webp"/>
+    <title><%= title %></title>
 
-  <link rel="stylesheet" href="/stylesheets/home.css" type="text/css">
-  <link rel="stylesheet" href="/stylesheets/elements/fonts.css" type="text/css">
-  <link rel="stylesheet" href="/stylesheets/elements/movie-card.css" type="text/css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="icon" href="/assets/icons/video_camera_icon.webp"/>
 
-  <script src="/javascripts/elements/logo.js"></script>
-  <script src="/javascripts/users/login-system.js"></script>
-  <script src="/javascripts/users/regional/lang-select.js"></script>
+    <link rel="stylesheet" href="/stylesheets/home.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/elements/fonts.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/elements/movie-card.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 
-  <script type="module" src="/javascripts/api/utils.js"></script>
-  <script type="module" src="/javascripts/frontend/home.js"></script>
-  
+    <script src="/javascripts/elements/logo.js"></script>
+    <script src="/javascripts/elements/lang-select.js"></script>
+    <script src="/javascripts/elements/prototype-btn.js"></script>
+
+    <script src="/javascripts/users/login-system.js"></script>
+
+    <script type="module" src="/javascripts/api/utils.js"></script>
+
+    <script type="module" src="/javascripts/frontend/home.js"></script>
+
+
 </head>
-
 <body>
-  <nav class="navbar">
+    <nav class="navbar">
+
     <div class="navbar-left">
-      <a href="home.html" class="nav-link">
-        <div class="logo">Film Haven</div>
-      </a>
+      <div class="logo">Film Haven</div>
     </div>
 
-    <div class="search-container">
-      <select class="search-filter">
-        <option>Todo</option>
-        <option>Películas</option>
-        <option>Reseñas</option>
-        <option>Películas Guardadas</option>
-      </select>
-      <input type="text" placeholder="Buscar en Film Haven" class="search-input">
-      <span id="search-button" class="material-symbols-outlined">search</span>
-    </div>
+    <h3>Un sitio de Jerome Foster & Aaron Augustin.</h3>
 
     <div class="navbar-right">
       <button id="login-btn">Iniciar Sesión</button>
       <button id="logout-btn">Cerrar Sesión</button>
+      <button id="prototype-btn">Prototipo</button>
 
       <select class="lang-select" onchange="changeLanguage(this.value)">
-        <option value="../">EN</option>
+        <option value="">EN</option>
         <option value="es" selected>ES</option>
       </select>
     </div>
   </nav>
 
-  <br><br>
+  <br> <br>
 
   <div class="now-playing__container">
     <section class="now-playing__text">
-      <h2>los últimos estrenos de películas</h2>
+      <h2>Últimos Lanzamientos de Películas</h2>
     </section>
 
     <section class="now-playing__images">
-      <div id="movie-recommendations">
+      <div id="lastest-movies">
          <!-- images will show dynamically -->
       </div>
     </section>
   </div>
-</body>
 
+  <div class="saved-movies__container">
+    <section class="saved-movies__text">
+      <h2>Tu Lista de Seguimiento (películas guardadas)</h2>
+    </section>
+
+    <section class="saved-movies__images">
+      <div id="watchlist">
+        <!-- images will show dynamically -->
+      </div>
+    </section>
+  </div>
+
+  <div class="genre__container">
+    <section class="genre__text">
+      <h2>Selecciona un género de película aquí => <input list="genre-list" placeholder="Elige un género" name="genre-list"> <button id="select">¡Dame Películas!</button></h2>
+      <datalist id="genre-list">
+        <option data-value="" value="Action">Acción</option>
+        <option data-value="" value="Adventure">Aventura</option>
+        <option data-value="" value="Animation">Animación</option>
+        <option data-value="" value="Comedy">Comedia</option>
+        <option data-value="" value="Crime">Crimen</option>
+        <option data-value="" value="Documentary">Documental</option>
+        <option data-value="" value="Drama">Drama</option>
+        <option data-value="" value="Family">Familia</option>
+        <option data-value="" value="Fantasy">Fantasía</option>
+        <option data-value="" value="History">Historia</option>
+        <option data-value="" value="Horror">Terror</option>
+        <option data-value="" value="Music">Música</option>
+        <option data-value="" value="Mystery">Misterio</option>
+        <option data-value="" value="Romance">Romance</option>
+        <option data-value="" value="Science Fiction">Ciencia Ficción</option>
+        <option data-value="" value="TV Movie">Película de TV</option>
+        <option data-value="" value="Thriller">Suspense</option>
+        <option data-value="" value="War">Guerra</option>
+        <option data-value="" value="Western">Oeste</option>
+        <option data-value="" value="Clear">Limpiar</option>
+      </datalist>
+    </section>
+
+    <section class="genre__images">
+      <!-- images will show dynamically -->
+    </section>
+  </div>
+
+  <script type="module" src="/javascripts/frontend/home.js"></script>
+  <script src="/javascripts/users/login-system.js"></script>
+  <script src="/javascripts/elements/lang-select.js"></script>
+  <script src="/javascripts/elements/logo.js"></script>
+  <script src="/javascripts/elements/prototype-btn.js"></script>
+  <script>
+    function changeLanguage(lang) {
+      if (lang === 'es') {
+        // Already on Spanish page, do nothing
+        return;
+      } else {
+        // Switch to English
+        window.location.href = '/';
+      }
+    }
+  </script>
+</body>
 </html>

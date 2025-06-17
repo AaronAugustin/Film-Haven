@@ -35,8 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     logout_btn.addEventListener("click", function () {
-        location.reload();
         localStorage.removeItem("currentUser");
+        const watchlist = document.getElementById("watchlist");
+        if (watchlist) {
+            watchlist.innerHTML = "";
+        }
+        location.reload();
         console.log("User logged out");
         is_logged_in = false;
     });
@@ -56,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location.href = "../index.ejs";
             console.log("User logged in");
             is_logged_in = true;
+            localStorage.setItem("currentUser");
         });
 
     console.log(is_logged_in ? "User is logged in" : "User is not logged in");

@@ -15,8 +15,11 @@ const apikey = "87cff27fedee57a2828f33c71296fc6d";
 
 /**
  * @description This is the base URL for the TMDB API.
- * @type {string}
+ * @type {string[]}
  */
-const baseUrl = "https://api.themoviedb.org/3/movie/now_playing";
+const baseUrl = [
+  "https://api.themoviedb.org/3/movie/now_playing",
+  "https://api.themoviedb.org/3/account/22066702/watchlist",
+];
 
 export { apikey, baseUrl };

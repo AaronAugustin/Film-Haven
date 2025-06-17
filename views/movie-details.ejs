@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="icon" href="/assets/icons/video_camera_icon.webp"/>
+  
+  <link rel="stylesheet" href="/stylesheets/home.css" type="text/css">
+  
+  <link rel="stylesheet" href="/stylesheets/elements/fonts.css" type="text/css">
+  <link rel="stylesheet" href="/stylesheets/elements/movie-card.css" type="text/css">
+  <link rel="stylesheet" href="/stylesheets/movie-details.css" type="text/css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo" onclick="window.location.href='/'">Film Haven</div>
+    </div>
+    <div class="navbar-right">
+      <select class="lang-select" id="langSelect" onchange="changeLanguage(this.value)">
+        <option value="" selected>EN</option>
+        <option value="es">ES</option>
+      </select>
+      <button id="login-btn" style="display: none;">Sign In</button>
+      <button id="logout-btn" style="display: none;">Logout</button>
+    </div>
+  </nav>
+
+  <main>
+    <div id="movie-details-container">
+      <!-- Movie details will be loaded here -->
+    </div>
+  </main>
+
+  <script type="module" src="/javascripts/frontend/movie-details.js"></script>
+  <script src="/javascripts/elements/lang-select.js"></script>
+  <script src="/javascripts/users/login-system.js"></script>
+</body>
+</html>
