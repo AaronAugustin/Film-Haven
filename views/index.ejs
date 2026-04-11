@@ -6,6 +6,38 @@
      <title><%= title %></title>
 </head>
 <body>
-     <h1>Hello World</h1>
+     <nav class="navbar">
+          <div class="navbar_left logo">Film Haven</div>
+          <div class="navbar_right">
+               <button id="login-btn">Login</button>
+               <button id="logout-btn">Logout</button>
+               <button id="proto-btn">Prototype</button>
+          </div>
+     </nav> <br>
+
+     <div class="container">
+          <section id="now-playing">
+               <h2>Latest Movie Releases</h2>
+               <div class="now-playing_list"> <!-- Movie cards go here dynamically. --> </div>
+          </section>
+
+          <section id="saved-movies">
+               <h2>Your Watchlist (Saved Movies)</h2>
+               <div class="saved-movies_list"> <!-- Movie cards go here dynamically. --> </div>
+          </section>
+
+          <section id="genres">
+               <h2>
+                    Select a Genre:
+                    <input list="genre-options" placeholder="Select a Genre" name="genre-options">
+                    <button id="genre-options_select">Gimmie Movies!</button>
+               </h2>
+               <datalist id="genre-options"> <!-- Genre options go here dynamically. --> </datalist>
+
+               <div class="genres-list"> 
+                    <div id="genre-conveyor-belt"> <!-- Movie cards go here dynamically. --> </div>
+               </div>
+          </section>
+     </div>
 </body>
 </html>
