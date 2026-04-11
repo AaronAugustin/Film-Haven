@@ -12,9 +12,11 @@
   },
   "license": "MIT",
   "author": "Aaron Augustin, Jerome Foster",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "node .bin/www",
-    "dev": "nodemon .bin/www",
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
     "build": ""
   },
   "dependencies": {
