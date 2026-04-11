@@ -1,6 +1,8 @@
 # Film Haven
 Welcome to the official Github repository of Film Haven!
 
+View the final website on [Replit](http://replit.com/@JeromeFoster2/final-movie-proj-1).
+
 ## What is this?
 Film Haven is a place where you can discover new films, watch trailers, and share your thoughts on popular movies.
 This project was put together by [Aaron Augustin](https://github.com/AnimatingLegend), & [Jerome Foster](https://github.com/Yamuu07) to enhance the experience of searching, and reviewing movies. Think of it as Rotten Tomatos, or Letterbox, but better!
