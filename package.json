@@ -1,0 +1,30 @@
+{
+  "name": "film-haven",
+  "version": "1.0.0",
+  "description": "discover new films, watch trailers, & share your thoughts on popular movies.",
+  "homepage": "https://github.com/AaronAugustin/Film-Haven",
+  "bugs": {
+    "url": "https://github.com/AaronAugustin/Film-Haven/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronAugustin/Film-Haven.git"
+  },
+  "license": "MIT",
+  "author": "Aaron Augustin, Jerome Foster",
+  "scripts": {
+    "start": "node .bin/www",
+    "dev": "nodemon .bin/www",
+    "build": ""
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.4.3",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "http-errors": "^2.0.1",
+    "morgan": "^1.10.1",
+    "tmdb-js-wrapper": "^1.0.6",
+    "winston": "^3.19.0"
+  }
+}
