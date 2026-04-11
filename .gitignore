@@ -23,10 +23,11 @@ jspm_packages/
 .env.test.local
 .env.production.local
 .env.local
+config.json
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 dist/
 
-# package-lock.json
+# Optional REPL history
 package-lock.json
