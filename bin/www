@@ -4,7 +4,6 @@
  * Module dependencies.
  */
 import app from '../app.js';
-import debug from 'debug';
 import http from 'http';
 
 /**
@@ -67,6 +66,5 @@ function onError(error) {
  */
 function onListening() {
      var addr = server.address();
-     var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
-     debug('Listening on ' + bind);
+     console.log(`Initialized server on http://localhost:${addr.port}`);
 }
