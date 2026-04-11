@@ -1,0 +1,80 @@
+/* ---------------------*\
+*    Tags and Elements  * |
+* ----------------------*/
+html, body {
+     width: 100%; height: 100%;
+     margin: 0;
+     font-family: limerick-serial-bold;
+     background-color: #1a0d00;
+}
+
+h2, h3 {
+     color: #fcaf01;
+     font-family: limerick-serial-regular;
+}
+
+input {
+     width: 300px; height: 30px;
+     border-radius: 10px;
+     text-align: center;
+}
+
+input[type='genre-options'] {
+     height: 30px;
+     border-radius: 5px;
+     text-align: center;
+     font-family: limerick-serial-regular;
+}
+
+/* ---------------------*\
+*     Classes and IDs   * |
+* ----------------------*/
+
+/** Navigation bar logic **/
+.navbar {
+    background-color: #331a00; color: white;
+    display: flex; justify-content: space-between; 
+    align-items: center;
+    padding: 12px 32px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.navbar_left {
+     display: flex; align-items: center;
+     gap: 20px;
+}
+
+.navbar_right {
+     display: flex; align-items: center;
+     gap: 20px;
+}
+
+/** Logo and Button Styling  **/
+.logo {
+     background-color: #fcaf01; color: #b90100;
+     font-weight: bold; font-size: 22px;
+     letter-spacing: 0.5px;
+     padding: 6px 12px;
+     border-radius: 6px;
+     transition: 0.3s ease;
+}
+
+.logo:hover {
+     background-color: rgba(252, 177, 1, 0.589); color: #b900008f;
+     cursor: pointer;
+}
+
+#login-btn, #logout-btn, #proto-btn, #genre-options_select {
+     background-color: #fcaf01; color: #b90100;
+     border: none; border-radius: 4px;
+     padding: 6px 10px;
+     font-weight: bold;
+     transition: 0.3s ease;
+     cursor: pointer;
+}
+
+#login-btn:hover, #logout-btn:hover, #proto-btn:hover, #genre-options_select:hover { 
+     background-color: rgba(252, 177, 1, 0.589); color: #b900008f; 
+}
+
+#saved-movies { display:none; } /** Hide saved-movies section by default. (the user must login in order to view it) **/
