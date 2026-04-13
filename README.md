@@ -18,7 +18,7 @@ npm install
 ```
 If not all of the depdencies installed, then type them in manually.
 #### Included Depedencies:
-- `cookie-parser`, `debug`, `ejs`, `express`, `http-errors`, `morgan`, `tmdb-js-wrapper`, `winston`
+- `axios`, `cookie-parser`, `debug`, `ejs`, `express`, `http-errors`, `morgan`, `tmdb-js-wrapper`
 ### 3. Build the language.
 Run the following command to create both a `dist/` directory.
 ```bash
