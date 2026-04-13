@@ -1,0 +1,70 @@
+/* --------------------------- */
+/*     Tags and Elements       */  
+/* --------------------------- */
+html {
+     height: 100%; width: 100%;
+     font-family: limerick-serial-regular;
+     background-color: #1a0d00;
+}
+
+h1, h2, h3 {
+     text-align: center;
+     color: #fcaf01;
+}
+
+h1 {
+     font-size: 70px;
+     text-shadow: 5px 5px #b90100;
+}
+
+h2 { 
+     font-size: 25px; 
+     font-family: limerick-serial-heavy;
+}
+
+h3 {  font-family: limerick-serial-regular; }
+
+select[type='genre-options'] {
+     height: 30px; width: 300px;
+     border-radius: 10px;
+     text-align: center;
+}
+
+select, button {
+     margin: 0 auto;
+     margin-top: 10px;
+     display: block;
+     text-align: center;
+     font-family: limerick-serial-regular;
+     border-radius: 5px;
+}
+
+button {
+     background-color: #b90100;
+     color: #fcaf01;
+     width: 200px;
+     transition: background-color 0.3s ease;
+}
+
+button:hover { background-color: white; }
+
+/** Images are dynamically added using the TMDB API **/
+/** Adding this logic here for future reference... **/
+img {
+     border: 4px solid #fcaf01; border-radius: 6px;
+     box-shadow: 5px 5px #b90100;
+}
+
+footer {
+     text-align: center;
+     padding: 3px;
+     color: #b90100;
+}
+
+/* --------------------------- */
+/*       Classes And IDs       */
+/* --------------------------- */
+
+/* --------------------------------------- */
+/*      Dynamically Rendered Objects       */
+/* --------------------------------------- */

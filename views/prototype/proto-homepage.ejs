@@ -5,11 +5,47 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title><%= title %></title>
 
+     <!-- Stylesheets -->
+     <link rel="stylesheet" href="/stylesheets/index-proto.css" types="text/css">
+
      <!-- Scripts -->
      <script src="/javascripts/elements/navbar-btns.js" defer></script>
 </head>
 <body>
-     <h1>Hello World!</h1>
-     <button id="proto-btn_return">RETURN HOME</button>
+     <h1>Film Haven Prototype</h1>
+     <h2>Welcome to Film Haven! Here you can find the latest movie releases based by genre.</h2>
+     <button id="proto-btn_return">Return to Main Page</button>
+
+     <h3>Please Select a genre from the dropdown below:</h3>
+     <div id="genre-options_container">
+          <select name="genre-options" type="genre-options" id="proto-genre-options_select">
+               <option value="Action">Action</option>
+               <option value="Adventure">Adventure</option>
+               <option value="Animation">Animation</option>
+               <option value="Comedy">Comedy</option>
+               <option value="Crime">Crime</option>
+               <option value="Documentary">Documentary</option>
+               <option value="Drama">Drama</option>
+               <option value="Family">Family</option>
+               <option value="Fantasy">Fantasy</option>
+               <option value="History">History</option>
+               <option value="Horror">Horror</option>
+               <option value="Music">Music</option>
+               <option value="Mystery">Mystery</option>
+               <option value="Romance">Romance</option>
+               <option value="Science Fiction">Science Fiction</option>
+               <option value="TV Movie">TV Movie</option>
+               <option value="Thriller">Thriller</option>
+               <option value="War">War</option>
+               <option value="Western">Western</option>
+          </select>
+          <button id="proto-genre-options_btn">Gimmie Movies!</button>
+     </div>
+     <div id="proto-genre-conveyor-belt"> <!-- Movie cards go here dynamically. --> </div>
+
+     <footer> 
+          <h3>A website by Jerome Foster, Aaron Augustin</h3>
+          <p>Copyright &copy; 2025 Film Haven. All rights reserved.</p>
+     </footer>
 </body>
 </html>
