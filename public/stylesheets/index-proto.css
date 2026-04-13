@@ -1,9 +1,11 @@
+@import "elements/fonts.css";
+
 /* --------------------------- */
 /*     Tags and Elements       */  
 /* --------------------------- */
 html {
      height: 100%; width: 100%;
-     font-family: limerick-serial-regular;
+     font-family: limerick-serial-bold;
      background-color: #1a0d00;
 }
 
