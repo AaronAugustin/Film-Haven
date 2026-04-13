@@ -45,7 +45,7 @@ input[type='genre-options'] {
 }
 
 /** Logo and Button Styling  **/
-.logo {
+#logo {
      background-color: #fcaf01; color: #b90100;
      font-weight: bold; font-size: 22px;
      letter-spacing: 0.5px;
@@ -54,7 +54,7 @@ input[type='genre-options'] {
      transition: 0.3s ease;
 }
 
-.logo:hover {
+#logo:hover {
      background-color: rgba(252, 177, 1, 0.589); color: #b900008f;
      cursor: pointer;
 }
