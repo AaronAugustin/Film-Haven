@@ -1,5 +1,10 @@
 import axios from 'axios';
-import config from '../../../config.json';
+import config from '../../../../config.json';
+
+// * ---------------------------------------------------------------- * \\
+// * API UTILITY SETUP                                                * \\
+// * Author: Aaron Augustin                                           * \\
+// * ---------------------------------------------------------------- * \\
 
 /**
  * Initialize API from TMDB
