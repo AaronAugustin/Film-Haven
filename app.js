@@ -1,14 +1,36 @@
 import express from 'express';
-import path from 'node:path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
 import indexRouter from './routes/index.js';
 
+// * ---------------------------------------------------------------- * \\
+// * APPLICATION SETUP                                                * \\
+// * Author: Aaron Augustin                                           * \\
+// * ---------------------------------------------------------------- * \\
+
+/**
+ * Initialize express application.
+ */
 var app = express();
 
+/**
+ * Handle file paths for express.
+ * @type {string}
+ */
+var __filename = fileURLToPath(import.meta.url);
+
+/**
+ * Handle directory paths for express.
+ * @type {string}
+ */
+var __dirname = dirname(__filename);
+
 // view engine setup.
-app.set('views', path.join('./views'));
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 // Middleware setup.
@@ -16,7 +38,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join('./public')));
+app.use(express.static(__dirname + '/public'));
 
 // Routes setup.
 app.use('/', indexRouter);
