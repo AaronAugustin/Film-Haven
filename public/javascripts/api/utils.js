@@ -5,7 +5,7 @@ import config from '../../../config.json';
  * Initialize API from TMDB
  * For more info: https://developers.themoviedb.org/
  */
-export const API_KEY = config.api_key;
+export const API_KEY = config.API_KEY;
 
 /**
  * Get API URLS from TMDB.
