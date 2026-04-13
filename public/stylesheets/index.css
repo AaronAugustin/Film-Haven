@@ -39,12 +39,7 @@ input[type='genre-options'] {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-.navbar_left {
-     display: flex; align-items: center;
-     gap: 20px;
-}
-
-.navbar_right {
+.navbar_left, .navbar_right {
      display: flex; align-items: center;
      gap: 20px;
 }
